@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="green-theme">
+  <div class="theme-toggle">
+    <label>
+      <input type="checkbox" id="themeSwitcher">
+      Toggle Black & White Mode
+    </label>
+  </div>
+
+  <div class="quiz-container">
+    <h2>Simple Quiz</h2>
+
+    <div id="questionBox">
+      <p id="question">What is the capital of India?</p>
+      <div id="options">
+        <button class="option-btn">Mumbai</button>
+        <button class="option-btn">Delhi</button>
+        <button class="option-btn">Kolkata</button>
+        <button class="option-btn">Chennai</button>
+      </div>
+    </div>
+
+    <div id="result" class="hidden">
+      <h3>Your Score: <span id="score">0</span>/5</h3>
+      <button id="restartBtn">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script>
+    // Theme toggle logic
+    const themeSwitcher = document.getElementById('themeSwitcher');
+    themeSwitcher.addEventListener('change', function () {
+      document.body.classList.toggle('bw-theme');
+    });
+  </script>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
